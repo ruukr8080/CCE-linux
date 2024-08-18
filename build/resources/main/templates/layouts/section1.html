@@ -1,0 +1,26 @@
+<section th:fragment="section1">
+    <div class="grid gap-4">
+        <div class="flex items-center justify-between"></div>
+
+        <div th:if="${section1 == null}">
+            <div class="grid gap-4 md:grid-cols-2">
+                <div th:insert="~{component/sec1-1 :: sec1-1}" class="p-6">
+                    <div class="rounded-lg border shadow-sm bg-card text-card-foreground grid-cols-1" data-v0-t="card"></div>
+                </div>
+                <div th:insert="~{component/sec1-2 :: sec1-2}" class="p-6">
+                    <div class="rounded-lg border shadow-sm bg-card text-card-foreground grid-cols-2" data-v0-t="card"></div>
+                </div>
+            </div>
+        </div>
+        <div th:if="${section1 != null}">
+            <div class="grid gap-4 md:grid-cols-2">
+                <div th:insert="~{component/result1-1 :: result1-1}" class="p-6">
+                    <div class="rounded-lg border shadow-sm bg-card text-card-foreground grid-cols-1" data-v0-t="card"></div>
+                </div>
+                <div th:insert="~{component/result1-2 :: result1-2}" class="p-6">
+                    <div class="rounded-lg border shadow-sm bg-card text-card-foreground grid-cols-2" data-v0-t="card"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

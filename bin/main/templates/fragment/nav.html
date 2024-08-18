@@ -1,0 +1,53 @@
+<!DOCTYPE html>]
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<nav th:fragment="NavFragment">
+    <aside class="sidebar">
+        <div class="sidebar-header">
+
+            <h2> <img src="images/logo.png" alt="logo"></h2>
+        </div>
+        <ul class="sidebar-links">
+            <h4>
+                <div class="menu-separator"></div>
+            </h4>
+            <li>
+                <a href="http://localhost:8081/">
+                    <span class="material-symbols-outlined"><i class="fi fi-rr-home"></i></span>내 정보</a>
+            </li>
+            <li>
+            </li>
+            <h4>
+<!--                <span>진단 결과</span>-->
+                <div class="menu-separator"></div>
+            </h4>
+            <li>
+                <a href="http://localhost:8081/api/resultTarget"><span class="material-symbols-outlined"><i class="fi fi-rr-add-document"></i> </span>서버 점검</a>
+            </li>
+            <li>
+                <a href="http://localhost:8081/api/resultGra"><span class="material-symbols-outlined"><i class="fi fi-rr-add-document"></i> </span>대시 보드</a>
+            </li>
+            <li>
+                <a href="http://localhost:8081/api/resultDetail"><span class="material-symbols-outlined"> <i class="fi fi-rr-add-document"></i> </span>진단 상세</a>
+            </li>
+            <li>
+                <a href="http://localhost:8081/api/resultSummary"><span class="material-symbols-outlined"><i class="fi fi-rr-add-document"></i></span>진단 요약</a>
+            </li>
+            <li>
+                <a href="http://localhost:8081/api/resultSecurity"><span class="material-symbols-outlined"> <i class="fi fi-tr-file-download"></i></span>보안 점검</a>
+            </li>
+
+
+        <div class="user-account">
+            <div class="user-profile">
+                <img src="images/logo.png" alt="Profile Image" />
+                <div class="user-detail">
+                    <h3>인프라진단</h3>
+                    <span>서비스</span>
+                </div>
+            </div>
+        </div>
+    </aside>
+</nav>
+</body>
+</html>

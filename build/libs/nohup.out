@@ -1,0 +1,593 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.2)
+
+2024-08-11T12:26:52.581Z  INFO 1460 --- [           main] e.K.SpringBootDeveloperApplication       : Starting SpringBootDeveloperApplication v1.0-SNAPSHOT using Java 17.0.11 with PID 1460 (/root/.ssh/kosapro/build/libs/board-1.0-SNAPSHOT.jar started by root in /root/.ssh/kosapro/build/libs)
+2024-08-11T12:26:52.590Z  INFO 1460 --- [           main] e.K.SpringBootDeveloperApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-08-11T12:26:56.930Z  INFO 1460 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2024-08-11T12:26:56.972Z  INFO 1460 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-11T12:26:56.973Z  INFO 1460 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-11T12:26:57.332Z  INFO 1460 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-11T12:26:57.337Z  INFO 1460 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3858 ms
+2024-08-11T12:27:01.043Z  INFO 1460 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2024-08-11T12:27:01.106Z  INFO 1460 --- [           main] e.K.SpringBootDeveloperApplication       : Started SpringBootDeveloperApplication in 9.82 seconds (process running for 11.815)
+2024-08-11T12:27:01.828Z  INFO 1460 --- [nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-11T12:27:01.830Z  INFO 1460 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-11T12:27:01.833Z  INFO 1460 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-08-11T12:27:06.123Z  INFO 1460 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : Received request with username: centos, ipAddress: 3.35.206.80, port: 22
+2024-08-11T12:27:06.127Z  INFO 1460 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : Connecting to SSH server at 3.35.206.80:22 with username: centos
+2024-08-11T12:27:06.687Z  INFO 1460 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : SSH session connected.
+2024-08-11T12:27:07.034Z  INFO 1460 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File uploaded to remote server.
+
+Note: This output shows SysV services only and does not include native
+      systemd services. SysV configuration data might be overridden by native
+      systemd configuration.
+
+      If you want to list systemd services use 'systemctl list-unit-files'.
+      To see services enabled on particular target use
+      'systemctl list-dependencies [target]'.
+
+
+Note: This output shows SysV services only and does not include native
+      systemd services. SysV configuration data might be overridden by native
+      systemd configuration.
+
+      If you want to list systemd services use 'systemctl list-unit-files'.
+      To see services enabled on particular target use
+      'systemctl list-dependencies [target]'.
+
+
+Note: This output shows SysV services only and does not include native
+      systemd services. SysV configuration data might be overridden by native
+      systemd configuration.
+
+      If you want to list systemd services use 'systemctl list-unit-files'.
+      To see services enabled on particular target use
+      'systemctl list-dependencies [target]'.
+
+2024-08-11T12:27:12.138Z  INFO 1460 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : Command Output: 
+2024-08-11T12:27:12.163Z  INFO 1460 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File downloaded from remote server.
+2024-08-11T12:27:12.176Z  INFO 1460 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : SSH session disconnected.
+2024-08-11T12:27:12.176Z  INFO 1460 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File in directory: goAgent.py
+2024-08-11T12:27:12.176Z  INFO 1460 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File in directory: application.properties
+2024-08-11T12:27:12.176Z  INFO 1460 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File in directory: result2.json
+2024-08-11T12:27:12.177Z  INFO 1460 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File in directory: CentOS6.sh
+2024-08-11T12:27:12.177Z  INFO 1460 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File in directory: result.json
+2024-08-11T12:27:12.177Z  INFO 1460 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File in directory: templates
+2024-08-11T12:27:12.179Z  INFO 1460 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File in directory: static
+2024-08-11T12:27:12.183Z  INFO 1460 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : JSON 파일 위치: /root/.ssh/kosapro/src/main/resources/result.json
+2024-08-11T12:27:13.234Z  INFO 1460 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : JSON file uploaded to S3 bucket: kosapro-bucket
+2024-08-11T12:27:13.489Z  INFO 1460 --- [nio-8081-exec-7] e.Kosademo.controller.HomeController     : Most recent JSON file key: result.json
+2024-08-11T12:27:13.640Z  INFO 1460 --- [nio-8081-exec-7] e.Kosademo.controller.HomeController     : Parsing JSON file: /root/.ssh/kosapro/build/libs/downloaded_result.json
+2024-08-11T12:27:13.709Z  INFO 1460 --- [nio-8081-exec-7] e.Kosademo.controller.HomeController     : {(상)={[양호]=32, [인터뷰]=2, [취약]=8, [N/A]=1}, (중)={[양호]=13, [취약]=4}, (하)={[양호]=6, [인터뷰]=2, [취약]=4}}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.2)
+
+2024-08-11T12:31:43.242Z  INFO 1903 --- [           main] e.K.SpringBootDeveloperApplication       : Starting SpringBootDeveloperApplication v1.0-SNAPSHOT using Java 17.0.11 with PID 1903 (/root/.ssh/kosapro/build/libs/board-1.0-SNAPSHOT.jar started by root in /root/.ssh/kosapro/build/libs)
+2024-08-11T12:31:43.252Z  INFO 1903 --- [           main] e.K.SpringBootDeveloperApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-08-11T12:31:46.376Z  INFO 1460 --- [nio-8081-exec-8] e.Kosademo.controller.GoAgentController  : Received request with username: centos, ipAddress: 3.35.206.80, port: 22
+2024-08-11T12:31:46.377Z  INFO 1460 --- [nio-8081-exec-8] e.Kosademo.controller.GoAgentController  : Connecting to SSH server at 3.35.206.80:22 with username: centos
+2024-08-11T12:31:46.687Z  INFO 1460 --- [nio-8081-exec-8] e.Kosademo.controller.GoAgentController  : SSH session connected.
+2024-08-11T12:31:47.025Z  INFO 1460 --- [nio-8081-exec-8] e.Kosademo.controller.GoAgentController  : File uploaded to remote server.
+2024-08-11T12:31:48.353Z  INFO 1903 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2024-08-11T12:31:48.398Z  INFO 1903 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-11T12:31:48.398Z  INFO 1903 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-11T12:31:48.788Z  INFO 1903 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-11T12:31:48.791Z  INFO 1903 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4491 ms
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.2)
+
+2024-08-11T12:38:07.989Z  INFO 1282 --- [           main] e.K.SpringBootDeveloperApplication       : Starting SpringBootDeveloperApplication v1.0-SNAPSHOT using Java 17.0.11 with PID 1282 (/root/.ssh/kosapro/build/libs/board-1.0-SNAPSHOT.jar started by root in /root/.ssh/kosapro/build/libs)
+2024-08-11T12:38:07.998Z  INFO 1282 --- [           main] e.K.SpringBootDeveloperApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-08-11T12:38:12.370Z  INFO 1282 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2024-08-11T12:38:12.415Z  INFO 1282 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-11T12:38:12.416Z  INFO 1282 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-11T12:38:12.802Z  INFO 1282 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-11T12:38:12.806Z  INFO 1282 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3960 ms
+2024-08-11T12:38:16.625Z  INFO 1282 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2024-08-11T12:38:16.690Z  INFO 1282 --- [           main] e.K.SpringBootDeveloperApplication       : Started SpringBootDeveloperApplication in 10.012 seconds (process running for 12.199)
+2024-08-11T12:38:16.878Z  INFO 1282 --- [nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-11T12:38:16.880Z  INFO 1282 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-11T12:38:16.883Z  INFO 1282 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-08-11T12:38:21.844Z  INFO 1282 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : Received request with username: centos, ipAddress: 3.35.206.80, port: 22
+2024-08-11T12:38:21.848Z  INFO 1282 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : Connecting to SSH server at 3.35.206.80:22 with username: centos
+2024-08-11T12:38:22.361Z  INFO 1282 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : SSH session connected.
+2024-08-11T12:38:22.706Z  INFO 1282 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File uploaded to remote server.
+
+Note: This output shows SysV services only and does not include native
+      systemd services. SysV configuration data might be overridden by native
+      systemd configuration.
+
+      If you want to list systemd services use 'systemctl list-unit-files'.
+      To see services enabled on particular target use
+      'systemctl list-dependencies [target]'.
+
+
+Note: This output shows SysV services only and does not include native
+      systemd services. SysV configuration data might be overridden by native
+      systemd configuration.
+
+      If you want to list systemd services use 'systemctl list-unit-files'.
+      To see services enabled on particular target use
+      'systemctl list-dependencies [target]'.
+
+
+Note: This output shows SysV services only and does not include native
+      systemd services. SysV configuration data might be overridden by native
+      systemd configuration.
+
+      If you want to list systemd services use 'systemctl list-unit-files'.
+      To see services enabled on particular target use
+      'systemctl list-dependencies [target]'.
+
+2024-08-11T12:38:27.972Z  INFO 1282 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : Command Output: 
+2024-08-11T12:38:27.987Z  INFO 1282 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File downloaded from remote server.
+2024-08-11T12:38:27.994Z  INFO 1282 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : SSH session disconnected.
+2024-08-11T12:38:27.994Z  INFO 1282 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File in directory: goAgent.py
+2024-08-11T12:38:27.994Z  INFO 1282 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File in directory: application.properties
+2024-08-11T12:38:27.995Z  INFO 1282 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File in directory: result2.json
+2024-08-11T12:38:27.995Z  INFO 1282 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File in directory: CentOS6.sh
+2024-08-11T12:38:27.995Z  INFO 1282 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File in directory: result.json
+2024-08-11T12:38:27.995Z  INFO 1282 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File in directory: templates
+2024-08-11T12:38:27.995Z  INFO 1282 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File in directory: static
+2024-08-11T12:38:27.997Z  INFO 1282 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : JSON 파일 위치: /root/.ssh/kosapro/src/main/resources/result.json
+2024-08-11T12:38:28.908Z  INFO 1282 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : JSON file uploaded to S3 bucket: kosapro-bucket
+2024-08-11T12:38:29.155Z  INFO 1282 --- [nio-8081-exec-7] e.Kosademo.controller.HomeController     : Most recent JSON file key: result.json
+2024-08-11T12:38:29.293Z  INFO 1282 --- [nio-8081-exec-7] e.Kosademo.controller.HomeController     : Parsing JSON file: /root/.ssh/kosapro/build/libs/downloaded_result.json
+2024-08-11T12:38:29.387Z  INFO 1282 --- [nio-8081-exec-7] e.Kosademo.controller.HomeController     : {(상)={[양호]=32, [인터뷰]=2, [취약]=8, [N/A]=1}, (중)={[양호]=13, [취약]=4}, (하)={[양호]=6, [인터뷰]=2, [취약]=4}}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.2)
+
+2024-08-11T12:41:51.013Z  INFO 1457 --- [           main] e.K.SpringBootDeveloperApplication       : Starting SpringBootDeveloperApplication v1.0-SNAPSHOT using Java 17.0.11 with PID 1457 (/root/.ssh/kosapro/build/libs/board-1.0-SNAPSHOT.jar started by root in /root/.ssh/kosapro/build/libs)
+2024-08-11T12:41:51.022Z  INFO 1457 --- [           main] e.K.SpringBootDeveloperApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-08-11T12:41:55.266Z  INFO 1457 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2024-08-11T12:41:55.303Z  INFO 1457 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-11T12:41:55.304Z  INFO 1457 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-11T12:41:55.680Z  INFO 1457 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-11T12:41:55.683Z  INFO 1457 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3796 ms
+2024-08-11T12:41:59.634Z  INFO 1457 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2024-08-11T12:41:59.696Z  INFO 1457 --- [           main] e.K.SpringBootDeveloperApplication       : Started SpringBootDeveloperApplication in 9.948 seconds (process running for 11.89)
+2024-08-11T12:41:59.875Z  INFO 1457 --- [nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-11T12:41:59.877Z  INFO 1457 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-11T12:41:59.879Z  INFO 1457 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-08-11T12:42:03.736Z  INFO 1457 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : Received request with username: centos, ipAddress: 3.35.206.80, port: 22
+2024-08-11T12:42:03.738Z  INFO 1457 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : Connecting to SSH server at 3.35.206.80:22 with username: centos
+2024-08-11T12:42:04.192Z  INFO 1457 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : SSH session connected.
+2024-08-11T12:42:04.531Z  INFO 1457 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File uploaded to remote server.
+
+Note: This output shows SysV services only and does not include native
+      systemd services. SysV configuration data might be overridden by native
+      systemd configuration.
+
+      If you want to list systemd services use 'systemctl list-unit-files'.
+      To see services enabled on particular target use
+      'systemctl list-dependencies [target]'.
+
+
+Note: This output shows SysV services only and does not include native
+      systemd services. SysV configuration data might be overridden by native
+      systemd configuration.
+
+      If you want to list systemd services use 'systemctl list-unit-files'.
+      To see services enabled on particular target use
+      'systemctl list-dependencies [target]'.
+
+
+Note: This output shows SysV services only and does not include native
+      systemd services. SysV configuration data might be overridden by native
+      systemd configuration.
+
+      If you want to list systemd services use 'systemctl list-unit-files'.
+      To see services enabled on particular target use
+      'systemctl list-dependencies [target]'.
+
+2024-08-11T12:42:09.814Z  INFO 1457 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : Command Output: 
+2024-08-11T12:42:09.835Z  INFO 1457 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File downloaded from remote server.
+2024-08-11T12:42:09.842Z  INFO 1457 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : SSH session disconnected.
+2024-08-11T12:42:09.843Z  INFO 1457 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File in directory: goAgent.py
+2024-08-11T12:42:09.844Z  INFO 1457 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File in directory: application.properties
+2024-08-11T12:42:09.845Z  INFO 1457 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File in directory: result2.json
+2024-08-11T12:42:09.847Z  INFO 1457 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File in directory: CentOS6.sh
+2024-08-11T12:42:09.847Z  INFO 1457 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File in directory: result.json
+2024-08-11T12:42:09.847Z  INFO 1457 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File in directory: templates
+2024-08-11T12:42:09.847Z  INFO 1457 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File in directory: static
+2024-08-11T12:42:09.849Z  INFO 1457 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : JSON 파일 위치: /root/.ssh/kosapro/src/main/resources/result.json
+2024-08-11T12:42:10.868Z  INFO 1457 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : JSON file uploaded to S3 bucket: kosapro-bucket
+2024-08-11T12:42:11.109Z  INFO 1457 --- [nio-8081-exec-7] e.Kosademo.controller.HomeController     : Most recent JSON file key: result.json
+2024-08-11T12:42:11.249Z  INFO 1457 --- [nio-8081-exec-7] e.Kosademo.controller.HomeController     : Parsing JSON file: /root/.ssh/kosapro/build/libs/downloaded_result.json
+2024-08-11T12:42:11.338Z  INFO 1457 --- [nio-8081-exec-7] e.Kosademo.controller.HomeController     : {(상)={[양호]=32, [인터뷰]=2, [취약]=8, [N/A]=1}, (중)={[양호]=13, [취약]=4}, (하)={[양호]=6, [인터뷰]=2, [취약]=4}}
+Unrecognized option: -java
+Error: Could not create the Java Virtual Machine.
+Error: A fatal exception has occurred. Program will exit.
+Unrecognized option: -java
+Error: Could not create the Java Virtual Machine.
+Error: A fatal exception has occurred. Program will exit.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.2)
+
+2024-08-11T13:02:16.256Z  INFO 1467 --- [           main] e.K.SpringBootDeveloperApplication       : Starting SpringBootDeveloperApplication v1.0-SNAPSHOT using Java 17.0.11 with PID 1467 (/root/.ssh/kosapro/build/libs/board-1.0-SNAPSHOT.jar started by root in /root/.ssh/kosapro/build/libs)
+2024-08-11T13:02:16.268Z  INFO 1467 --- [           main] e.K.SpringBootDeveloperApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-08-11T13:02:20.752Z  INFO 1467 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2024-08-11T13:02:20.802Z  INFO 1467 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-11T13:02:20.802Z  INFO 1467 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-11T13:02:21.188Z  INFO 1467 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-11T13:02:21.191Z  INFO 1467 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3952 ms
+2024-08-11T13:02:25.344Z  INFO 1467 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2024-08-11T13:02:25.409Z  INFO 1467 --- [           main] e.K.SpringBootDeveloperApplication       : Started SpringBootDeveloperApplication in 10.472 seconds (process running for 12.357)
+2024-08-11T13:02:35.175Z  INFO 1467 --- [nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-11T13:02:35.176Z  INFO 1467 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-11T13:02:35.182Z  INFO 1467 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2024-08-11T13:02:40.096Z  INFO 1467 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : Received request with username: centos, ipAddress: 3.35.206.80, port: 22
+2024-08-11T13:02:40.100Z  INFO 1467 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : Connecting to SSH server at 3.35.206.80:22 with username: centos
+2024-08-11T13:02:40.617Z  INFO 1467 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : SSH session connected.
+2024-08-11T13:02:40.953Z  INFO 1467 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File uploaded to remote server.
+
+Note: This output shows SysV services only and does not include native
+      systemd services. SysV configuration data might be overridden by native
+      systemd configuration.
+
+      If you want to list systemd services use 'systemctl list-unit-files'.
+      To see services enabled on particular target use
+      'systemctl list-dependencies [target]'.
+
+
+Note: This output shows SysV services only and does not include native
+      systemd services. SysV configuration data might be overridden by native
+      systemd configuration.
+
+      If you want to list systemd services use 'systemctl list-unit-files'.
+      To see services enabled on particular target use
+      'systemctl list-dependencies [target]'.
+
+
+Note: This output shows SysV services only and does not include native
+      systemd services. SysV configuration data might be overridden by native
+      systemd configuration.
+
+      If you want to list systemd services use 'systemctl list-unit-files'.
+      To see services enabled on particular target use
+      'systemctl list-dependencies [target]'.
+
+2024-08-11T13:02:46.174Z  INFO 1467 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : Command Output: 
+2024-08-11T13:02:46.200Z  INFO 1467 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File downloaded from remote server.
+2024-08-11T13:02:46.208Z  INFO 1467 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : SSH session disconnected.
+2024-08-11T13:02:46.209Z  INFO 1467 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File in directory: goAgent.py
+2024-08-11T13:02:46.210Z  INFO 1467 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File in directory: application.properties
+2024-08-11T13:02:46.210Z  INFO 1467 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File in directory: result2.json
+2024-08-11T13:02:46.211Z  INFO 1467 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File in directory: CentOS6.sh
+2024-08-11T13:02:46.211Z  INFO 1467 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File in directory: result.json
+2024-08-11T13:02:46.211Z  INFO 1467 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File in directory: templates
+2024-08-11T13:02:46.211Z  INFO 1467 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File in directory: static
+2024-08-11T13:02:46.214Z  INFO 1467 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : JSON 파일 위치: /root/.ssh/kosapro/src/main/resources/result.json
+2024-08-11T13:02:47.421Z  INFO 1467 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : JSON file uploaded to S3 bucket: kosapro-bucket
+2024-08-11T13:02:48.409Z  INFO 1467 --- [nio-8081-exec-7] e.Kosademo.controller.HomeController     : Most recent JSON file key: result.json
+2024-08-11T13:02:48.538Z  INFO 1467 --- [nio-8081-exec-7] e.Kosademo.controller.HomeController     : Parsing JSON file: /root/.ssh/kosapro/build/libs/downloaded_result.json
+2024-08-11T13:02:48.611Z  INFO 1467 --- [nio-8081-exec-7] e.Kosademo.controller.HomeController     : {(상)={[양호]=32, [인터뷰]=2, [취약]=8, [N/A]=1}, (중)={[양호]=13, [취약]=4}, (하)={[양호]=6, [인터뷰]=2, [취약]=4}}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.2)
+
+2024-08-11T13:05:41.339Z  INFO 1591 --- [           main] e.K.SpringBootDeveloperApplication       : Starting SpringBootDeveloperApplication v1.0-SNAPSHOT using Java 17.0.11 with PID 1591 (/root/.ssh/kosapro/build/libs/board-1.0-SNAPSHOT.jar started by root in /root/.ssh/kosapro/build/libs)
+2024-08-11T13:05:41.350Z  INFO 1591 --- [           main] e.K.SpringBootDeveloperApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-08-11T13:05:45.781Z  INFO 1591 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2024-08-11T13:05:45.822Z  INFO 1591 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-11T13:05:45.822Z  INFO 1591 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-11T13:05:46.237Z  INFO 1591 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-11T13:05:46.241Z  INFO 1591 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3956 ms
+2024-08-11T13:05:50.374Z  INFO 1591 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2024-08-11T13:05:50.593Z  INFO 1591 --- [           main] e.K.SpringBootDeveloperApplication       : Started SpringBootDeveloperApplication in 10.478 seconds (process running for 12.747)
+2024-08-11T13:05:50.744Z  INFO 1591 --- [nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-11T13:05:50.745Z  INFO 1591 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-11T13:05:50.749Z  INFO 1591 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2024-08-11T13:05:55.645Z  INFO 1591 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : Received request with username: centos, ipAddress: 3.35.206.80, port: 22
+2024-08-11T13:05:55.650Z  INFO 1591 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : Connecting to SSH server at 3.35.206.80:22 with username: centos
+2024-08-11T13:05:56.132Z  INFO 1591 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : SSH session connected.
+2024-08-11T13:05:56.494Z  INFO 1591 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File uploaded to remote server.
+
+Note: This output shows SysV services only and does not include native
+      systemd services. SysV configuration data might be overridden by native
+      systemd configuration.
+
+      If you want to list systemd services use 'systemctl list-unit-files'.
+      To see services enabled on particular target use
+      'systemctl list-dependencies [target]'.
+
+
+Note: This output shows SysV services only and does not include native
+      systemd services. SysV configuration data might be overridden by native
+      systemd configuration.
+
+      If you want to list systemd services use 'systemctl list-unit-files'.
+      To see services enabled on particular target use
+      'systemctl list-dependencies [target]'.
+
+
+Note: This output shows SysV services only and does not include native
+      systemd services. SysV configuration data might be overridden by native
+      systemd configuration.
+
+      If you want to list systemd services use 'systemctl list-unit-files'.
+      To see services enabled on particular target use
+      'systemctl list-dependencies [target]'.
+
+2024-08-11T13:06:01.813Z  INFO 1591 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : Command Output: 
+2024-08-11T13:06:01.830Z  INFO 1591 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File downloaded from remote server.
+2024-08-11T13:06:01.837Z  INFO 1591 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : SSH session disconnected.
+2024-08-11T13:06:01.838Z  INFO 1591 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File in directory: goAgent.py
+2024-08-11T13:06:01.838Z  INFO 1591 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File in directory: application.properties
+2024-08-11T13:06:01.838Z  INFO 1591 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File in directory: result2.json
+2024-08-11T13:06:01.838Z  INFO 1591 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File in directory: CentOS6.sh
+2024-08-11T13:06:01.838Z  INFO 1591 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File in directory: result.json
+2024-08-11T13:06:01.838Z  INFO 1591 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File in directory: templates
+2024-08-11T13:06:01.838Z  INFO 1591 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File in directory: static
+2024-08-11T13:06:01.841Z  INFO 1591 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : JSON 파일 위치: /root/.ssh/kosapro/src/main/resources/result.json
+2024-08-11T13:06:02.828Z  INFO 1591 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : JSON file uploaded to S3 bucket: kosapro-bucket
+2024-08-11T13:06:03.237Z  INFO 1591 --- [nio-8081-exec-7] e.Kosademo.controller.HomeController     : Most recent JSON file key: result.json
+2024-08-11T13:06:03.366Z  INFO 1591 --- [nio-8081-exec-7] e.Kosademo.controller.HomeController     : Parsing JSON file: /root/.ssh/kosapro/build/libs/downloaded_result.json
+2024-08-11T13:06:03.462Z  INFO 1591 --- [nio-8081-exec-7] e.Kosademo.controller.HomeController     : {(상)={[양호]=32, [인터뷰]=2, [취약]=8, [N/A]=1}, (중)={[양호]=13, [취약]=4}, (하)={[양호]=6, [인터뷰]=2, [취약]=4}}
+2024-08-11T13:12:48.070Z  INFO 1591 --- [nio-8081-exec-6] e.Kosademo.controller.HomeController     : Most recent JSON file key: result.json
+2024-08-11T13:12:48.128Z  INFO 1591 --- [nio-8081-exec-6] e.Kosademo.controller.HomeController     : Parsing JSON file: /root/.ssh/kosapro/build/libs/downloaded_result.json
+2024-08-11T13:12:48.140Z  INFO 1591 --- [nio-8081-exec-6] e.Kosademo.controller.HomeController     : {(상)={[양호]=32, [인터뷰]=2, [취약]=8, [N/A]=1}, (중)={[양호]=13, [취약]=4}, (하)={[양호]=6, [인터뷰]=2, [취약]=4}}
+2024-08-11T13:14:30.504Z  INFO 1591 --- [nio-8081-exec-4] e.Kosademo.controller.GoAgentController  : Received request with username: centos, ipAddress: 3.35.206.80, port: 22
+2024-08-11T13:14:30.506Z  INFO 1591 --- [nio-8081-exec-4] e.Kosademo.controller.GoAgentController  : Connecting to SSH server at 3.35.206.80:22 with username: centos
+2024-08-11T13:14:30.744Z  INFO 1591 --- [nio-8081-exec-4] e.Kosademo.controller.GoAgentController  : SSH session connected.
+2024-08-11T13:14:31.067Z  INFO 1591 --- [nio-8081-exec-4] e.Kosademo.controller.GoAgentController  : File uploaded to remote server.
+2024-08-11T13:14:36.258Z  INFO 1591 --- [nio-8081-exec-4] e.Kosademo.controller.GoAgentController  : Command Output: 
+2024-08-11T13:14:36.267Z  INFO 1591 --- [nio-8081-exec-4] e.Kosademo.controller.GoAgentController  : File downloaded from remote server.
+2024-08-11T13:14:36.270Z  INFO 1591 --- [nio-8081-exec-4] e.Kosademo.controller.GoAgentController  : SSH session disconnected.
+2024-08-11T13:14:36.270Z  INFO 1591 --- [nio-8081-exec-4] e.Kosademo.controller.GoAgentController  : File in directory: goAgent.py
+2024-08-11T13:14:36.271Z  INFO 1591 --- [nio-8081-exec-4] e.Kosademo.controller.GoAgentController  : File in directory: application.properties
+2024-08-11T13:14:36.271Z  INFO 1591 --- [nio-8081-exec-4] e.Kosademo.controller.GoAgentController  : File in directory: result2.json
+2024-08-11T13:14:36.271Z  INFO 1591 --- [nio-8081-exec-4] e.Kosademo.controller.GoAgentController  : File in directory: CentOS6.sh
+2024-08-11T13:14:36.271Z  INFO 1591 --- [nio-8081-exec-4] e.Kosademo.controller.GoAgentController  : File in directory: result.json
+2024-08-11T13:14:36.271Z  INFO 1591 --- [nio-8081-exec-4] e.Kosademo.controller.GoAgentController  : File in directory: templates
+2024-08-11T13:14:36.271Z  INFO 1591 --- [nio-8081-exec-4] e.Kosademo.controller.GoAgentController  : File in directory: static
+2024-08-11T13:14:36.271Z  INFO 1591 --- [nio-8081-exec-4] e.Kosademo.controller.GoAgentController  : JSON 파일 위치: /root/.ssh/kosapro/src/main/resources/result.json
+2024-08-11T13:14:36.366Z  INFO 1591 --- [nio-8081-exec-4] e.Kosademo.controller.GoAgentController  : JSON file uploaded to S3 bucket: kosapro-bucket
+2024-08-11T13:14:36.519Z  INFO 1591 --- [nio-8081-exec-6] e.Kosademo.controller.HomeController     : Most recent JSON file key: result.json
+2024-08-11T13:14:36.550Z  INFO 1591 --- [nio-8081-exec-6] e.Kosademo.controller.HomeController     : Parsing JSON file: /root/.ssh/kosapro/build/libs/downloaded_result.json
+2024-08-11T13:14:36.558Z  INFO 1591 --- [nio-8081-exec-6] e.Kosademo.controller.HomeController     : {(상)={[양호]=32, [인터뷰]=2, [취약]=8, [N/A]=1}, (중)={[양호]=13, [취약]=4}, (하)={[양호]=6, [인터뷰]=2, [취약]=4}}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.2)
+
+2024-08-11T13:34:49.122Z  INFO 1774 --- [           main] e.K.SpringBootDeveloperApplication       : Starting SpringBootDeveloperApplication v1.0-SNAPSHOT using Java 17.0.11 with PID 1774 (/root/.ssh/kosapro/build/libs/board-1.0-SNAPSHOT.jar started by root in /root/.ssh/kosapro/build/libs)
+2024-08-11T13:34:49.131Z  INFO 1774 --- [           main] e.K.SpringBootDeveloperApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-08-11T13:34:53.374Z  INFO 1774 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2024-08-11T13:34:53.413Z  INFO 1774 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-11T13:34:53.413Z  INFO 1774 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-11T13:34:53.805Z  INFO 1774 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-11T13:34:53.809Z  INFO 1774 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3814 ms
+2024-08-11T13:34:57.674Z  INFO 1774 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2024-08-11T13:34:57.738Z  INFO 1774 --- [           main] e.K.SpringBootDeveloperApplication       : Started SpringBootDeveloperApplication in 9.891 seconds (process running for 11.859)
+2024-08-11T13:35:04.109Z  INFO 1774 --- [nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-11T13:35:04.109Z  INFO 1774 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-11T13:35:04.113Z  INFO 1774 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-08-11T13:35:09.361Z  INFO 1774 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : Received request with username: centos, ipAddress: 3.35.206.80, port: 22
+2024-08-11T13:35:09.365Z  INFO 1774 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : Connecting to SSH server at 3.35.206.80:22 with username: centos
+2024-08-11T13:35:09.927Z  INFO 1774 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : SSH session connected.
+2024-08-11T13:35:10.273Z  INFO 1774 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File uploaded to remote server.
+
+Note: This output shows SysV services only and does not include native
+      systemd services. SysV configuration data might be overridden by native
+      systemd configuration.
+
+      If you want to list systemd services use 'systemctl list-unit-files'.
+      To see services enabled on particular target use
+      'systemctl list-dependencies [target]'.
+
+
+Note: This output shows SysV services only and does not include native
+      systemd services. SysV configuration data might be overridden by native
+      systemd configuration.
+
+      If you want to list systemd services use 'systemctl list-unit-files'.
+      To see services enabled on particular target use
+      'systemctl list-dependencies [target]'.
+
+
+Note: This output shows SysV services only and does not include native
+      systemd services. SysV configuration data might be overridden by native
+      systemd configuration.
+
+      If you want to list systemd services use 'systemctl list-unit-files'.
+      To see services enabled on particular target use
+      'systemctl list-dependencies [target]'.
+
+2024-08-11T13:35:15.351Z  INFO 1774 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : Command Output: 
+2024-08-11T13:35:15.371Z  INFO 1774 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File downloaded from remote server.
+2024-08-11T13:35:15.380Z  INFO 1774 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : SSH session disconnected.
+2024-08-11T13:35:15.380Z  INFO 1774 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File in directory: goAgent.py
+2024-08-11T13:35:15.381Z  INFO 1774 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File in directory: application.properties
+2024-08-11T13:35:15.381Z  INFO 1774 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File in directory: result2.json
+2024-08-11T13:35:15.382Z  INFO 1774 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File in directory: CentOS6.sh
+2024-08-11T13:35:15.383Z  INFO 1774 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File in directory: result.json
+2024-08-11T13:35:15.383Z  INFO 1774 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File in directory: templates
+2024-08-11T13:35:15.383Z  INFO 1774 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File in directory: static
+2024-08-11T13:35:15.385Z  INFO 1774 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : JSON 파일 위치: /root/.ssh/kosapro/src/main/resources/result.json
+2024-08-11T13:35:16.362Z  INFO 1774 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : JSON file uploaded to S3 bucket: kosapro-bucket
+2024-08-11T13:35:16.651Z  INFO 1774 --- [io-8081-exec-10] e.Kosademo.controller.HomeController     : Most recent JSON file key: result.json
+2024-08-11T13:35:16.792Z  INFO 1774 --- [io-8081-exec-10] e.Kosademo.controller.HomeController     : Parsing JSON file: /root/.ssh/kosapro/build/libs/downloaded_result.json
+2024-08-11T13:35:16.897Z  INFO 1774 --- [io-8081-exec-10] e.Kosademo.controller.HomeController     : {(상)={[양호]=32, [인터뷰]=2, [취약]=8, [N/A]=1}, (중)={[양호]=13, [취약]=4}, (하)={[양호]=6, [인터뷰]=2, [취약]=4}}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.2)
+
+2024-08-11T13:37:48.485Z  INFO 1910 --- [           main] e.K.SpringBootDeveloperApplication       : Starting SpringBootDeveloperApplication v1.0-SNAPSHOT using Java 17.0.11 with PID 1910 (/root/.ssh/kosapro/build/libs/board-1.0-SNAPSHOT.jar started by root in /root/.ssh/kosapro/build/libs)
+2024-08-11T13:37:48.494Z  INFO 1910 --- [           main] e.K.SpringBootDeveloperApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-08-11T13:37:52.546Z  INFO 1910 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2024-08-11T13:37:52.575Z  INFO 1910 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-11T13:37:52.576Z  INFO 1910 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-11T13:37:52.941Z  INFO 1910 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-11T13:37:52.944Z  INFO 1910 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3661 ms
+2024-08-11T13:37:56.928Z  INFO 1910 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2024-08-11T13:37:56.994Z  INFO 1910 --- [           main] e.K.SpringBootDeveloperApplication       : Started SpringBootDeveloperApplication in 9.834 seconds (process running for 11.87)
+2024-08-11T13:37:58.639Z  INFO 1910 --- [nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-11T13:37:58.640Z  INFO 1910 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-11T13:37:58.643Z  INFO 1910 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-08-11T13:38:03.489Z  INFO 1910 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : Received request with username: centos, ipAddress: 3.35.206.80, port: 22
+2024-08-11T13:38:03.492Z  INFO 1910 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : Connecting to SSH server at 3.35.206.80:22 with username: centos
+2024-08-11T13:38:03.965Z  INFO 1910 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : SSH session connected.
+2024-08-11T13:38:04.302Z  INFO 1910 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File uploaded to remote server.
+
+Note: This output shows SysV services only and does not include native
+      systemd services. SysV configuration data might be overridden by native
+      systemd configuration.
+
+      If you want to list systemd services use 'systemctl list-unit-files'.
+      To see services enabled on particular target use
+      'systemctl list-dependencies [target]'.
+
+
+Note: This output shows SysV services only and does not include native
+      systemd services. SysV configuration data might be overridden by native
+      systemd configuration.
+
+      If you want to list systemd services use 'systemctl list-unit-files'.
+      To see services enabled on particular target use
+      'systemctl list-dependencies [target]'.
+
+
+Note: This output shows SysV services only and does not include native
+      systemd services. SysV configuration data might be overridden by native
+      systemd configuration.
+
+      If you want to list systemd services use 'systemctl list-unit-files'.
+      To see services enabled on particular target use
+      'systemctl list-dependencies [target]'.
+
+2024-08-11T13:38:09.494Z  INFO 1910 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : Command Output: 
+2024-08-11T13:38:09.512Z  INFO 1910 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File downloaded from remote server.
+2024-08-11T13:38:09.519Z  INFO 1910 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : SSH session disconnected.
+2024-08-11T13:38:09.520Z  INFO 1910 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File in directory: goAgent.py
+2024-08-11T13:38:09.522Z  INFO 1910 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File in directory: application.properties
+2024-08-11T13:38:09.522Z  INFO 1910 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File in directory: result2.json
+2024-08-11T13:38:09.522Z  INFO 1910 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File in directory: CentOS6.sh
+2024-08-11T13:38:09.522Z  INFO 1910 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File in directory: result.json
+2024-08-11T13:38:09.523Z  INFO 1910 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File in directory: templates
+2024-08-11T13:38:09.523Z  INFO 1910 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File in directory: static
+2024-08-11T13:38:09.525Z  INFO 1910 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : JSON 파일 위치: /root/.ssh/kosapro/src/main/resources/result.json
+2024-08-11T13:38:10.554Z  INFO 1910 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : JSON file uploaded to S3 bucket: kosapro-bucket
+2024-08-11T13:38:10.909Z  INFO 1910 --- [io-8081-exec-10] e.Kosademo.controller.HomeController     : Most recent JSON file key: result.json
+2024-08-11T13:38:11.053Z  INFO 1910 --- [io-8081-exec-10] e.Kosademo.controller.HomeController     : Parsing JSON file: /root/.ssh/kosapro/build/libs/downloaded_result.json
+2024-08-11T13:38:11.135Z  INFO 1910 --- [io-8081-exec-10] e.Kosademo.controller.HomeController     : {(상)={[양호]=32, [인터뷰]=2, [취약]=8, [N/A]=1}, (중)={[양호]=13, [취약]=4}, (하)={[양호]=6, [인터뷰]=2, [취약]=4}}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.2)
+
+2024-08-11T13:42:43.831Z  INFO 2034 --- [           main] e.K.SpringBootDeveloperApplication       : Starting SpringBootDeveloperApplication v1.0-SNAPSHOT using Java 17.0.11 with PID 2034 (/root/.ssh/kosapro/build/libs/board-1.0-SNAPSHOT.jar started by root in /root/.ssh/kosapro/build/libs)
+2024-08-11T13:42:43.840Z  INFO 2034 --- [           main] e.K.SpringBootDeveloperApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-08-11T13:42:48.115Z  INFO 2034 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2024-08-11T13:42:48.165Z  INFO 2034 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-11T13:42:48.166Z  INFO 2034 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-11T13:42:48.560Z  INFO 2034 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-11T13:42:48.565Z  INFO 2034 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3849 ms
+2024-08-11T13:42:52.609Z  INFO 2034 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2024-08-11T13:42:52.671Z  INFO 2034 --- [           main] e.K.SpringBootDeveloperApplication       : Started SpringBootDeveloperApplication in 10.139 seconds (process running for 12.137)
+2024-08-11T13:42:52.913Z  INFO 2034 --- [nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-11T13:42:52.915Z  INFO 2034 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-11T13:42:52.917Z  INFO 2034 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-08-11T13:42:58.204Z  INFO 2034 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : Received request with username: centos, ipAddress: 3.35.206.80, port: 22
+2024-08-11T13:42:58.206Z  INFO 2034 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : Connecting to SSH server at 3.35.206.80:22 with username: centos
+2024-08-11T13:42:58.650Z  INFO 2034 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : SSH session connected.
+2024-08-11T13:42:59.006Z  INFO 2034 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File uploaded to remote server.
+
+Note: This output shows SysV services only and does not include native
+      systemd services. SysV configuration data might be overridden by native
+      systemd configuration.
+
+      If you want to list systemd services use 'systemctl list-unit-files'.
+      To see services enabled on particular target use
+      'systemctl list-dependencies [target]'.
+
+
+Note: This output shows SysV services only and does not include native
+      systemd services. SysV configuration data might be overridden by native
+      systemd configuration.
+
+      If you want to list systemd services use 'systemctl list-unit-files'.
+      To see services enabled on particular target use
+      'systemctl list-dependencies [target]'.
+
+
+Note: This output shows SysV services only and does not include native
+      systemd services. SysV configuration data might be overridden by native
+      systemd configuration.
+
+      If you want to list systemd services use 'systemctl list-unit-files'.
+      To see services enabled on particular target use
+      'systemctl list-dependencies [target]'.
+
+2024-08-11T13:43:04.202Z  INFO 2034 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : Command Output: 
+2024-08-11T13:43:04.217Z  INFO 2034 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File downloaded from remote server.
+2024-08-11T13:43:04.226Z  INFO 2034 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : SSH session disconnected.
+2024-08-11T13:43:04.227Z  INFO 2034 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File in directory: goAgent.py
+2024-08-11T13:43:04.227Z  INFO 2034 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File in directory: application.properties
+2024-08-11T13:43:04.227Z  INFO 2034 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File in directory: result2.json
+2024-08-11T13:43:04.227Z  INFO 2034 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File in directory: CentOS6.sh
+2024-08-11T13:43:04.227Z  INFO 2034 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File in directory: result.json
+2024-08-11T13:43:04.227Z  INFO 2034 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File in directory: templates
+2024-08-11T13:43:04.228Z  INFO 2034 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : File in directory: static
+2024-08-11T13:43:04.231Z  INFO 2034 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : JSON 파일 위치: /root/.ssh/kosapro/src/main/resources/result.json
+2024-08-11T13:43:05.248Z  INFO 2034 --- [nio-8081-exec-6] e.Kosademo.controller.GoAgentController  : JSON file uploaded to S3 bucket: kosapro-bucket
+2024-08-11T13:43:05.604Z  INFO 2034 --- [nio-8081-exec-7] e.Kosademo.controller.HomeController     : Most recent JSON file key: result.json
+2024-08-11T13:43:05.747Z  INFO 2034 --- [nio-8081-exec-7] e.Kosademo.controller.HomeController     : Parsing JSON file: /root/.ssh/kosapro/build/libs/downloaded_result.json
+2024-08-11T13:43:05.836Z  INFO 2034 --- [nio-8081-exec-7] e.Kosademo.controller.HomeController     : {(상)={[양호]=32, [인터뷰]=2, [취약]=8, [N/A]=1}, (중)={[양호]=13, [취약]=4}, (하)={[양호]=6, [인터뷰]=2, [취약]=4}}

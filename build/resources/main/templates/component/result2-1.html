@@ -1,0 +1,136 @@
+<div th:fragment="result2-1">
+    <div class="flex flex-col p-6 space-y-1.5">
+    </div>
+    <div class="max-h-96 overflow-auto">
+        <div class="relative max-h-96 w-full">
+            <table class="max-h-96 w-full text-sm caption-bottom">
+                <thead class="[&amp;_tr]:border-b sticky top-0 bg-white">
+                    <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
+                        <th class="h-12 px-4 text-left align-middle font-bold text-muted-foreground [&amp;:has([role=checkbox])]:pr-0">
+                            진단 대상
+                        </th>
+                        <th class="h-12 px-4 text-center align-middle font-bold text-muted-foreground [&amp;:has([role=checkbox])]:pr-0">
+                            중요도
+                        </th>
+                        <th class="h-12 px-4 text-center align-middle font-bold text-muted-foreground [&amp;:has([role=checkbox])]:pr-0">
+                            진단 결과 상태
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="result2_1" class="[tr:last-child]:border-0">
+                    <tr th:each="data, iterStat : ${checkResults}"
+                        class="border-b  transition-colors hover:bg-muted/50 max-h-96 data-[state=selected]:bg-muted">
+                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 text-left category-cell"
+                            th:text="${data.Category}"></td>
+                        <td class="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 ">
+                            <div class="inline-flex items-center whitespace-nowrap rounded-full border px-1 text-s  focus:ring-ring focus:outline-none focus:ring-2 focus:ring-offset-2">
+                                <span th:text="${data.Importance}" class="importance text-center font-bold"></span>
+                            </div>
+                        </td>
+                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 text-left font-semibold sub-category-cell"
+                            th:text="${data.Sub_Category}"></td>
+                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 text-left">
+                            <div class="inline-flex w-fit items-center whitespace-nowrap rounded-full text-xs font-semibold transition-colors px-2.5 py-0.5 focus:ring-ring focus:outline-none focus:ring-2 focus:ring-offset-2" data-v0-t="badge" th:classappend="${data.status == '[취약]' ? 'text-red-400' : (data.status == '[인터뷰]' ? 'text-amber-500' : 'text-green-200')}">
+                                <span th:text="${data.status}" class="status font-semibold"></span>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script th:inline="javascript">
+    document.addEventListener('DOMContentLoaded', function () {
+        const rows = document.querySelectorAll('#result2_1 tr');
+        let currentCategory = '';
+        let lastRowOfCategory = null;
+        const importanceElements = document.querySelectorAll('.importance');
+        const statusElements = document.querySelectorAll('.status');
+        // const subCategoryElements = document.querySelectorAll('.sub-category-cell');
+
+        rows.forEach((row, index) => {
+            const categoryCell = row.querySelector('.category-cell');
+            const categoryText = categoryCell.textContent.trim();
+            const categoryNumber = categoryText.split('.')[0];
+
+            if (categoryNumber !== currentCategory) {
+                // 새로운 카테고리의 시작
+                if (lastRowOfCategory) {
+                    // 이전 카테고리의 마지막 행에 굵은 밑줄 추가
+                    lastRowOfCategory.classList.add('border-b-4', 'border-gray-300');
+                }
+                currentCategory = categoryNumber;
+            }
+
+            // 현재 행을 해당 카테고리의 마지막 행으로 설정
+            lastRowOfCategory = row;
+
+            // 마지막 행 처리 (마지막 카테고리의 마지막 행)
+            if (index === rows.length - 1) {
+                lastRowOfCategory.classList.add('border-b-4', 'border-gray-300');
+            }
+
+            // 숫자 제거 (옵션)
+            categoryCell.textContent = categoryText.replace(/^\d+\.\s*/, '');
+        });
+
+
+
+        function removeNumber(text) {
+            return text.replace(/^\d+\.\d+\s*/+'');
+        }
+
+        categoryElements.forEach(function (cell) {
+            cell.textContent = removeNumber(cell.textContent);
+        });
+
+        subCategoryElements.forEach(function (cell) {
+            cell.textContent = removeNumber(cell.textContent);
+        });
+
+        rows.forEach(element => {
+            const importance = element.textContent;
+            let textColor;
+            let transformText;
+            let textWeight;
+
+            if (importance === '(상)') {
+                textColor = 'text-gray-600';
+                transformText = "높음";
+                textWeight ="font-bold"
+            } else if (importance === '(중)') {
+                textColor = 'text-gray-500';
+                transformText = "중간";
+                textWeight ="font-semibold"
+            } else if (importance === '(하)') {
+                textColor = 'text-gray-500';
+                transformText = "낮음"
+                textWeight ="font-thin"
+            }
+            element.parentElement.classList.add(textWeight, transformText, textColor);
+            element.textContent = transformText;
+        });
+
+        rows.forEach(element => {
+            const status = element.textContent;
+            let textColor = '';
+            let transformText = '';
+
+            if (status === '[취약]') {
+                textColor = 'text-red-500';
+                transformText = '위험';
+            } else if (status === '[인터뷰]') {
+                textColor = 'text-darkred-500';
+                transformText = '보통';
+            } else {
+                textColor = 'text-yellow-500';
+                transformText = '안전';
+            }
+
+            element.parentElement.classList.add(transformText, textColor);
+            element.textContent = transformText;
+        });
+    });
+    </script>
+</div>

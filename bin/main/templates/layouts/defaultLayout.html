@@ -1,0 +1,16 @@
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head th:replace="fragment/config :: ConfigFragment">
+    <title>인프라진단서비스</title>
+</head>
+<body>
+<!-- nav -->
+<th:block th:replace="fragment/nav :: NavFragment"></th:block>
+<!-- main 컨테이너 -->
+<main layout:fragment="MainFragment"><main>
+<!-- footer -->
+<th:block th:replace="fragment/footer :: FooterFragment"></th:block>
+<th:block layout:fragment="script"></th:block>
+</body>
+</html>

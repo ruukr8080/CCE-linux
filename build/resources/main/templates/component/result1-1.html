@@ -1,0 +1,37 @@
+<div th:fragment="result1-1" class="p-8">
+    <div class="relative max-h-96 w-full overflow-auto">
+        <table class="w-full text-sm caption-bottom">
+            <thead class="[&amp;_tr]:border-b">
+            <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
+                <th class="h-12 px-4 text-left align-middle font-bold text-muted-foreground [&amp;:has([role=checkbox])]:pr-0">
+                    점검일
+                </th>
+                <th class="h-12 px-4 align-middle font-bold text-muted-foreground [&amp;:has([role=checkbox])]:pr-0">
+                    Server
+                </th>
+                <th class="h-12 px-4 align-middle font-bold text-muted-foreground [&amp;:has([role=checkbox])]:pr-0">
+                    Status
+                </th>
+            </tr>
+            </thead>
+            <tbody id="result1_1" class="[&_tr:last-child]:border-0">
+            <tr>
+                <td class="p-2 align-middle" th:text="${section1.DATE}"></td>
+                <td class="p-2 pl-36 align-middle" th:text="${section1.SW_INFO}"></td>
+                <td class="p-2 pl-10 align-middle">
+                    <div th:classappend="${section1.allSecurity >= 70 ?
+                                                   'inline-flex w-fit items-center whitespace-nowrap rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 bg-green-500 text-white' :
+                                                   'inline-flex w-fit items-center whitespace-nowrap rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 bg-red-500 text-white'}"
+                         data-v0-t="badge">
+                        <span th:text="${section1.allSecurity + '%'}"></span>
+                    </div>
+                </td>
+            </tr>
+            <!-- 데이터가 없을 경우에 빈 상태로 유지 -->
+            <div th:unless="${section1 != null}">
+            </div>
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>

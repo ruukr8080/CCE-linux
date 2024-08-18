@@ -1,0 +1,62 @@
+<html lang="en"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/defaultLayout}">
+<!-- content : 메인 컨테이너-->
+<main layout:fragment="MainFragment" class="grid grid-cols-3 gap-2">
+
+    <div class="row1-cols1"><canvas id="card1Chart"></canvas>
+    </div>
+    <div class="row1-cols2"><canvas id="card2Chart"></canvas>
+    </div>
+    <div class="row1-cols3"><canvas id="card3Chart"></canvas>
+    </div>
+    <div class="col-span-3 ...">
+        <h1>서버 정보</h1>
+        <ul>
+            <!-- 서버 정보 항목을 각각 표시 -->
+            <li>SW_TYPE: <span th:text="${serverInfo['SW_TYPE']}"></span></li>
+            <li>SW_NM: <span th:text="${serverInfo['SW_NM']}"></span></li>
+            <li>SW_INFO: <span th:text="${serverInfo['SW_INFO']}"></span></li>
+            <li>HOST_NM: <span th:text="${serverInfo['HOST_NM']}"></span></li>
+            <li>DATE: <span th:text="${serverInfo['DATE']}"></span></li>
+            <li>TIME: <span th:text="${serverInfo['TIME']}"></span></li>
+            <li>IP_ADDRESS: <span th:text="${serverInfo['IP_ADDRESS']}"></span></li>
+            <li>UNIQ_ID: <span th:text="${serverInfo['UNIQ_ID']}"></span></li>
+        </ul>
+        <!-- 보안 점검 결과를 표시하는 섹션 -->
+        <h2>보안 점검 결과</h2>
+        <table>
+            <thead>
+            <tr>
+                <!-- 테이블 헤더 -->
+                <th>영역</th>
+                <th>양호</th>
+                <th>취약</th>
+                <th>N/A</th>
+                <th>항목별 보안지수</th>
+                <th>영역별 보안지수</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- 각 영역별 점검 결과를 표시 -->
+            <tr th:each="entry : ${categorizedResults}">
+                <td th:text="${entry.key}"></td>
+                <td th:text="${entry.value['[양호]'] != null ? entry.value['[양호]'] : 0}"></td>
+                <td th:text="${entry.value['[취약]'] != null ? entry.value['[취약]'] : 0}"></td>
+                <td th:text="${entry.value['[N/A]'] != null ? entry.value['[N/A]'] : 0}"></td>
+                <td th:text="${entry.value['[양호]'] != null ? entry.value['[양호]'] : 0}"></td> <!-- 항목별 보안지수 임시로 간단하게 수정 -->
+                <td th:text="${categorySecurityIndices[entry.key]} + '%'"></td> <!-- 영역별 보안지수 임시로 간단하게 수정 -->
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+                <!-- 테이블 푸터에 전체 통계를 표시 -->
+                <td colspan="5">전체 통계</td>
+                <td>종합보안수준: <span th:text="${overallSecurityIndex} + '%'"></span></td> <!-- 종합 보안 수준을 표시 -->
+            </tr>
+            </tfoot>
+        </table>
+    </div>
+
+</main>
+</html>

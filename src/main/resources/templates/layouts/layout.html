@@ -1,0 +1,15 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<div th:insert="~{layouts/head :: head}"></div>
+<body class="flex min-h-screen w-full flex-col text-gray-600 bg-muted/40">
+<main class="grid flex-1 gap-8 p-4 md:p-8">
+<header th:insert="~{layouts/header :: header}"></header>
+<section th:insert="~{layouts/section1 :: section1}"></section>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<section th:insert="~{layouts/section2 :: section2}"></section>
+<section th:insert="~{layouts/section3 :: section3}"></section>
+<section th:insert="~{layouts/section4 :: section4}"></section>
+</main>
+<script th:src="@{/js/common.js}"></script>
+<script th:src="@{/js/carousel.js}"></script>
+</body>
+</html>

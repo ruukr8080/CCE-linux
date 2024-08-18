@@ -1,0 +1,23 @@
+<!-- Create By Joker Banny -->
+<div th:fragment="formregister">
+  <form action="/run" method="post">
+    <div class="bg-white rounded-md p-2 max-w-lg shadow-md">
+<!--      <h1 class="text-center text-lg font-bold text-gray-500">진단 폼</h1>-->
+      <div class="space-y-3 mt-4">
+        <div class="w-full">
+          <input value="centos" type="text" id="username" name="username"  placeholder="진단 대상" class="px-4 py-2 bg-gray-50" required>
+        </div>
+        <div class="w-full">
+          <input value="0718" type="text" id="password" name="password" placeholder="password" class="px-4 py-2 bg-gray-50" required>
+        </div>
+        <div class="w-full">
+          <input value="3.35.206.80" type="text" id="ipAddress" name="ipAddress" placeholder="IP" class="px-4 py-2 bg-gray-50" required>
+        </div>
+        <div class="w-full">
+          <input value="22" type="number" id="port" name="port" min="1" max="65535" placeholder="port"  class="px-4 py-2 bg-gray-50" required>
+        </div>
+      </div>
+      <button type="submit" class="w-full mt-5 bg-blue-300 text-gray-500 py-2 rounded-md font-semibold tracking-tight">start</button>
+    </div>
+  </form>
+</div>

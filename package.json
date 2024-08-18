@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "flowbite": "^2.5.1"
+  },
+  "scripts": {
+    "build": "tailwindcss -i ./styles.css -o ../resources/static/output.css --minify",
+    "watch": "tailwindcss -i ./styles.css -o ../resources/static/output.css --watch"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.41",
+    "tailwindcss": "^3.4.9"
+  }
+}

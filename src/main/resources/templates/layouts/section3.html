@@ -1,0 +1,51 @@
+<section th:fragment="section3">
+    <div class="grid gap-4">
+        <div class="flex items-center justify-between">
+            <h2 class="text-2xl font-semibold">Report</h2>
+
+        </div>
+        <div class="rounded-lg border shadow-sm bg-card text-card-foreground bg-blue" data-v0-t="card">
+            <div class="p-6">
+                <div class="relative max-h-96 w-full overflow-auto">
+                    <table class="w-full text-sm caption-bottom">
+                        <thead class="[&amp;_tr]:border-b bg-white sticky top-0">
+                        <tr class="border-b transition-colors sticky top-0 hover:bg-muted/50 data-[state=selected]:bg-muted">
+                            <th class="h-12 px-4 text-left align-middle font-bold text-muted-foreground [&amp;:has([role=checkbox])]:pr-0">
+                                OS
+                            </th>
+                            <th class="h-12 px-4 text-left align-middle font-bold text-muted-foreground [&amp;:has([role=checkbox])]:pr-0">
+                                Host
+                            </th>
+                            <th class="h-12 px-4 text-left align-middle font-bold text-muted-foreground [&amp;:has([role=checkbox])]:pr-0">
+                                IP
+                            </th>
+                            <th class="h-12 px-4 text-left align-middle font-bold text-muted-foreground [&amp;:has([role=checkbox])]:pr-0">
+                                진단 항목
+                            </th>
+                            <th class="h-12 px-4 text-left align-middle font-bold text-muted-foreground [&amp;:has([role=checkbox])]:pr-0">
+                                Importance
+                            </th>
+                            <th class="h-12 px-4 text-left align-middle font-bold text-muted-foreground [&amp;:has([role=checkbox])]:pr-0">
+                                안정성
+                            </th>
+
+                        </tr>
+                        </thead>
+                        <tbody class="max-h-96 overflow-auto [&_tr:last-child]:border-0" id="section3Tbody">
+                        <tr th:each="data : ${section3}" class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
+                            <td class="p-4 align-middle [&:has([role=checkbox])]:pr-0" th:text="${data.OS}"></td>
+                            <td class="p-4 align-middle [&:has([role=checkbox])]:pr-0" th:text="${data.Host}"></td>
+                            <td class="p-4 align-middle [&:has([role=checkbox])]:pr-0" th:text="${data.IP}"></td>
+                            <td class="p-4 align-middle [&:has([role=checkbox])]:pr-0" th:text="${data.Sub_Category}"></td>
+                            <td class="p-4 align-middle [&:has([role=checkbox])]:pr-0" th:text="${data.Importance}"></td>
+                            <td class="p-4 align-middle [&:has([role=checkbox])]:pr-0" th:text="${data.Status}"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</section>

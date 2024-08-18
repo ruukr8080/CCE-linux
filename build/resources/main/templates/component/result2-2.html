@@ -1,0 +1,150 @@
+<div th:fragment="result2-2" class="p-8">
+<!--    <div class="container mx-auto px-4 py-8">-->
+
+<!--&lt;!&ndash;        <h1 class="text-2xl font-bold mb-4">보안 점검 결과 차트</h1>&ndash;&gt;-->
+<!--                <canvas class="grid-cols-2 bg-white p-1 rounded-lg shadow" id="categorySecurityChart"></canvas>-->
+<!--            </div>-->
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!--            <div class="bg-gray-100 p-4 rounded-lg shadow">-->
+                <!--                <h2 class="text-lg font-semibold mb-2">중요도 및 상태 차트</h2>-->
+                <!--                <canvas id="importanceStatusChart"></canvas>-->
+                <!--                <span>높음 중요도에서 우수** 개</span>-->
+                <!--                <span>높음 중요도에서 양호** 개</span>-->
+                <!--                <span>높음 중요도에서 취약** 개</span>-->
+            <div>
+
+
+
+<!--    <div class="rounded-lg border shadow-sm bg-card text-card-foreground bg-blue">-->
+    <h1 class="category_title" style="font-size: 24px; font-weight: bold;">Category Result</h1>
+        <div class="chart mt-6">
+            <canvas id="securityChart"></canvas>
+        </div>
+
+        </div>
+    </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script th:inline="javascript">
+ document.addEventListener('DOMContentLoaded', function () {
+     var ctx = document.getElementById('securityChart').getContext('2d');
+
+     // Thymeleaf 변수를 JavaScript 변수로 변환
+     var categorySecurityJson = /*[[${categorySecurityJson}]]*/ '{}';
+
+     // JSON 문자열을 JavaScript 객체로 변환
+     var categorySecurity = JSON.parse(categorySecurityJson);
+
+     // categorySecurity의 키와 값을 분리하여 배열로 변환
+     var labels = [];
+     var dataValues = [];
+
+     // categorySecurity 객체의 키와 값 분리
+     for (var key in categorySecurity) {
+         if (categorySecurity.hasOwnProperty(key)) {
+             labels.push(key);
+             dataValues.push(categorySecurity[key]);
+         }
+     }
+
+     // 원래 데이터의 형식을 고려하여 레이블의 번호를 제거
+     var cleanedLabels = labels.map(function(label) {
+         // 레이블에서 번호와 공백을 제거하여 실제 이름만 표시
+         return label.split(' ').slice(1).join(' ');
+     });
+
+     console.log('Labels:', cleanedLabels); // labels 출력
+     console.log('Data Values:', dataValues); // dataValues 출력
+
+     // 차트 생성
+     var securityChart = new Chart(ctx, {
+         type: 'radar',
+         data: {
+             labels: cleanedLabels,
+             datasets: [{
+                 label: '보안 지수', // 이 라벨은 차트의 범례에 표시됩니다
+                 data: dataValues,
+                 backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                 borderColor: 'rgba(54, 162, 235, 1)',
+                 borderWidth: 1
+             }]
+         },
+         options: {
+             scales: {
+                 r: {
+                     angleLines: {
+                         display: true
+                     },
+                     suggestedMin: 0,
+                     suggestedMax: 100,
+                     ticks: {
+                         stepSize: 20
+                     }
+                 }
+             },
+             elements: {
+                 line: {
+                     borderWidth: 2
+                 }
+             }
+         }
+     });
+ });
+
+    //     const importanceStatusData = /*[[${importanceStatusData}]]*/ {};
+    //     const importanceStatusCtx = document.getElementById('importanceStatusChart').getContext('2d');
+    //     const importanceLevels = Object.keys(importanceStatusData);
+    //     const statusTypes = ['[양호]', '[취약]', '[N/A]'];
+    //
+    //     new Chart(importanceStatusCtx, {
+    //         type: 'bar',
+    //         data: {
+    //             labels: importanceLevels,
+    //             datasets: statusTypes.map(status => ({
+    //                 label: status,
+    //                 data: importanceLevels.map(importance => importanceStatusData[importance][status] || 0),
+    //                 backgroundColor: status === '[양호]' ? '#4BC0C0' : status === '[취약]' ? '#FF6384' : '#FFCE56'
+    //             }))
+    //         },
+    //         options: {
+    //             responsive: true,
+    //             scales: {
+    //                 x: { stacked: true },
+    //                 y: { stacked: true, beginAtZero: true }
+    //             }
+    //         }
+    //     });
+    //
+    //     // 카테고리별 보안 점수 차트
+    //     const categorySecurityData = /*[[${categorySecurity}]]*/ {};
+    //     const categorySecurityCtx = document.getElementById('categorySecurityChart').getContext('2d');
+    //
+    //     new Chart(categorySecurityCtx, {
+    //         type: 'pie',
+    //         data: {
+    //             labels: Object.keys(categorySecurityData),
+    //             datasets: [{
+    //                 data: Object.values(categorySecurityData),
+    //                 backgroundColor: Object.keys(categorySecurityData).map((_, index) =>
+    //                     `hsl(${index * 360 / Object.keys(categorySecurityData).length}, 70%, 60%)`)
+    //             }]
+    //         },
+    //         options: {
+    //             responsive: true,
+    //             plugins: {
+    //                 legend: { position: 'right' },
+    //                 tooltip: {
+    //                     callbacks: {
+    //                         label: function (context) {
+    //                             return `${context.label}: ${context.formattedValue}%`;
+    //                         }
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //     });
+    // });
+    // /*]]>*/
+    </script>
+</div>
+</div>

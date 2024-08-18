@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout}"
+>
+<main layout:fragment="content">
+    <p>현재 서버에 오류가 생겨 요청을 처리하지 못하였습니다.</p>
+    <p>새로고침 하여 다시 시도해 보거나 잠시 후 이용해 주십시오.</p>
+    <p>궁금한 점이 있으시면 언제든 고객센터를 통해 문의해주시기 바랍니다.</p>
+
+    <div>
+        <a href="/static">홈으로</a>
+        <a href="javascript:history.back()">이전으로</a>
+    </div>
+</main>
+</html>

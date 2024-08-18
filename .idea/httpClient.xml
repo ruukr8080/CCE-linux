@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="HttpClientEndpointsTabState">
+    <option name="requestToText" value="&lt;CachedHttpClientTabRequests&gt;&#10;  &lt;entry key=&quot;b3ad2eebd7493fb6f886982a5e64a314178693c0&quot; value=&quot;###&amp;#10;POST http://localhost:8081/run?&amp;#10;    username={{$random.alphanumeric(8)}}&amp;amp;&amp;#10;    password={{$random.alphanumeric(8)}}&amp;amp;&amp;#10;    ipAddress={{$random.alphanumeric(8)}}&amp;amp;&amp;#10;    port={{$random.integer(100)}}&quot; /&gt;&#10;&lt;/CachedHttpClientTabRequests&gt;" />
+  </component>
+</project>

@@ -1,0 +1,36 @@
+<section th:fragment="section2">
+    <div class="grid gap-4">
+        <div class="flex items-center justify-between"></div>
+<!--            <h2 class="text-2xl font-semibold">가이드라인과 결과 비교</h2>-->
+        <div th:if="${section2 == null}">
+            <div class="grid gap-4 md:grid-cols-2">
+                <div th:insert="~{component/sec2-1 :: sec2-1}" class="p-6">
+                    <div class="rounded-lg border shadow-sm bg-card text-card-foreground grid-cols-1" data-v0-t="card"></div>
+                </div>
+                <div th:insert="~{component/sec2-2 :: sec2-2}" class="p-6">
+                    <div class="rounded-lg border shadow-sm bg-card text-card-foreground grid-cols-2" data-v0-t="card"></div>
+                </div>
+            </div>
+        </div>
+        <div th:if="${section2 != null}">
+            <div class="grid gap-4 md:grid-cols-2">
+                <div th:insert="~{component/result2-1 :: result2-1}" class="p-6">
+                    <div class="rounded-lg border shadow-sm bg-card text-card-foreground grid-cols-1" data-v0-t="card"></div>
+                </div>
+                <div th:insert="~{component/result2-2 :: result2-2}" class="p-6">
+                    <div class="rounded-lg border shadow-sm bg-card text-card-foreground grid-cols-2" data-v0-t="card"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--                <div class="flex flex-col p-6 space-y-1.5">-->
+<!--                    <h3 class="whitespace-nowrap text-2xl font-semibold leading-none tracking-tight">ResultInfo</h3>-->
+<!--                </div>-->
+
+<!--                <div class="p-6">-->
+<!--                    <div th:insert="~{component/carousel :: carousel}" class="flex flex-col items-start justify-center m-2 ml-0 font-medium text-gray-500"> </div>-->
+<!--                </div>-->
+
+

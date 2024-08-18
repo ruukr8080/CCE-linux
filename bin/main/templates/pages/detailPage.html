@@ -1,0 +1,50 @@
+<html lang="en"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/defaultLayout}">
+
+<style>
+
+</style>
+<body>
+<!-- content : 메인 컨테이너-->
+<main layout:fragment="MainFragment" class="grid grid-cols-3 gap-2">
+
+    <div class="row1-cols1"><canvas id="card1Chart"></canvas>
+    </div>
+    <div class="row1-cols2"><canvas id="card2Chart"></canvas>
+    </div>
+    <div class="row1-cols3"><canvas id="card3Chart"></canvas>
+    </div>
+    <div class="col-span-3 ...">
+
+        <h1>진단 상세</h1>
+        <ul>
+            <li th:each="result : ${checkResults}">
+                <h2 th:text="${result['Item']}">Item</h2>
+                <p>Importance: <span th:text="${result['Importance']}"></span></p>
+                <p>Category: <span th:text="${result['Category']}"></span></p>
+                <p>Sub Category: <span th:text="${result['Sub_Category']}"></span></p>
+                <p>Description: <span th:text="${result['Description']}"></span></p>
+                <p>Status: <span th:text="${result['status']}"></span></p>
+                <p>Details: <span th:text="${result['details'][0]}"></span></p>
+
+                <p th:if="${result['solutions'] != null and #lists.size(result['solutions']) > 0}">
+                    Solutions: <span th:text="${result['solutions'][0]}"></span>
+                </p>
+                <div>
+                    <h3>Server Info</h3>
+                    <p>SW_TYPE: <span th:text="${result['Server_Info']['SW_TYPE']}"></span></p>
+                    <p>SW_NM: <span th:text="${result['Server_Info']['SW_NM']}"></span></p>
+                    <p>SW_INFO: <span th:text="${result['Server_Info']['SW_INFO']}"></span></p>
+                    <p>HOST_NM: <span th:text="${result['Server_Info']['HOST_NM']}"></span></p>
+                    <p>DATE: <span th:text="${result['Server_Info']['DATE']}"></span></p>
+                    <p>TIME: <span th:text="${result['Server_Info']['TIME']}"></span></p>
+                    <p>IP_ADDRESS: <span th:text="${result['Server_Info']['IP_ADDRESS']}"></span></p>
+                    <p>UNIQ_ID: <span th:text="${result['Server_Info']['UNIQ_ID']}"></span></p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</main>
+</body>
+</html>

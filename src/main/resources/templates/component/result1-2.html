@@ -1,0 +1,113 @@
+<div th:fragment="result1-2" class="p-8">
+
+
+    <div class="bg-white p-4 rounded-lg shadow col-span-1 md:col-span-2">
+        <div class="grid-cols-1 font-bold ">
+            <div id="allSecurityScore" th:text="${allSecurity}" class="text-4xl text-center"
+                th:style="${'color: ' + (allSecurity >= 90 ? '#4BC0C0' : allSecurity >= 70 ? '#36A2EB' : allSecurity >= 50 ? '#FFCE56' : '#FF6384')}">
+        </div>
+        </div>
+    </div>
+
+    <div class="bg-gray-100 p-4 rounded-lg shadow grid-cols-2">
+<!--                <h2 class="text-lg font-semibold mb-2">중요도 및 상태 차트</h2>-->
+                <canvas id="importanceStatusChart"></canvas>
+<!--                <span>높음 중요도에서 우수** 개</span>-->
+<!--                <span>높음 중요도에서 양호** 개</span>-->
+<!--                <span>높음 중요도에서 취약** 개</span>-->
+    </div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script th:inline="javascript">
+    /*<![CDATA[*/
+    document.addEventListener('DOMContentLoaded', function () {
+
+        const importanceStatusData = /*[[${importanceStatusData}]]*/ {};
+        const importanceStatusCtx = document.getElementById('importanceStatusChart').getContext('2d');
+        const importanceLevels = Object.keys(importanceStatusData);
+        const statusTypes = ['[양호]', '[취약]', '[N/A]'];
+
+        new Chart(importanceStatusCtx, {
+            type: 'bar',
+            data: {
+                labels: importanceLevels,
+                datasets: statusTypes.map(status => ({
+                    label: status,
+                    data: importanceLevels.map(importance => importanceStatusData[importance][status] || 0),
+                    backgroundColor: status === '[양호]' ? '#4BC0C0' : status === '[취약]' ? '#FF6384' : '#FFCE56'
+                }))
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    x: { stacked: true },
+                    y: { stacked: true, beginAtZero: true }
+                }
+            }
+        });
+
+        // 카테고리별 보안 점수 차트
+        const categorySecurityData = /*[[${categorySecurity}]]*/ {};
+        const categorySecurityCtx = document.getElementById('categorySecurityChart').getContext('2d');
+
+        new Chart(categorySecurityCtx, {
+            type: 'pie',
+            data: {
+                labels: Object.keys(categorySecurityData),
+                datasets: [{
+                    data: Object.values(categorySecurityData),
+                    backgroundColor: Object.keys(categorySecurityData).map((_, index) =>
+                        `hsl(${index * 360 / Object.keys(categorySecurityData).length}, 70%, 60%)`)
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { position: 'right' },
+                    tooltip: {
+                        callbacks: {
+                            label: function (context) {
+                                return `${context.label}: ${context.formattedValue}%`;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+
+
+        // 숫자 카운트 애니메이션
+        const allSecurity = /*[[${allSecurity}]]*/ 0;
+        const duration = 2000; // 애니메이션 지속 시간 (밀리초)
+        const steps = 100; // 애니메이션 단계
+        const stepDuration = duration / steps;
+        const str='점'
+
+        const scoreElement = document.getElementById('allSecurityScore');
+        let currentStep = 0;
+
+        function animateScore() {
+            currentStep++;
+            const progress = currentStep / steps;
+            const currentScore = Math.round(allSecurity * progress);
+            scoreElement.textContent = `${currentScore}`+str;
+            scoreElement.style.color = getScoreColor(currentScore);
+
+            if (currentStep < steps) {
+                setTimeout(animateScore, stepDuration);
+            }
+        }
+        function getScoreColor(score,str) {
+            if (score >= 90) return '#4BC0C0';
+            if (score >= 70) return '#36A2EB';
+            if (score >= 50) return '#FFCE56';
+            return '#FF6384';
+        }
+
+        animateScore();
+    });
+    /*]]>*/
+    </script>
+</div>

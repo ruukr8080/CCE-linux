@@ -1,0 +1,334 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+a{
+    color: white;
+    background: none;
+    text-decoration: none;
+}
+
+body {
+    grid-template-columns: 1fr 5fr;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: #F0F4FF;
+
+}
+
+.sidebar {
+    position: fixed;
+    min-height: 100vh;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 180px;
+    display: flex;
+    overflow-x: hidden;
+    flex-direction: column;
+    background: #161a2d;
+    padding: 25px 20px;
+    transition: all 0.4s ease;
+}
+
+/*.sidebar:hover {*/
+/*    width: 180px;*/
+/*}*/
+
+.sidebar .sidebar-header {
+    margin: 0 auto;
+    display: flex;
+}
+
+.sidebar .sidebar-header img {
+    width: 42px;
+    border-radius: 50%;
+}
+
+.sidebar .sidebar-header h2 {
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 600;
+    white-space: nowrap;
+    margin-left: 3px;
+}
+
+.sidebar-links h4 {
+    color: #fff;
+    font-weight: 500;
+    white-space: nowrap;
+    margin: 10px 0;
+    position: relative;
+}
+
+.sidebar-links h4 span {
+    opacity: 0;
+}
+
+/*.sidebar:hover .sidebar-links h4 span {*/
+/*    opacity: 1;*/
+/*}*/
+
+.sidebar-links .menu-separator {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+    transform: translateY(-50%);
+    transform-origin: right;
+    transition-delay: 0.2s;
+}
+
+.sidebar:hover .sidebar-links .menu-separator {
+    transition-delay: 0s;
+    transform: scaleX(0);
+}
+
+.sidebar-links {
+    list-style: none;
+    margin-top: 20px;
+    height: 80%;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.sidebar-links::-webkit-scrollbar {
+    display: none;
+}
+
+.sidebar-links li a {
+    display: flex;
+    align-items: center;
+    gap: 0 20px;
+    color: #fff;
+    font-weight: 500;
+    white-space: nowrap;
+    padding: 15px 10px;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.sidebar-links li a:hover {
+    color: #161a2d;
+    background: #fff;
+    border-radius: 4px;
+}
+
+.user-account {
+    margin-top: auto;
+    padding: 12px 10px;
+    margin-left: -10px;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    color: #161a2d;
+}
+
+.user-profile img {
+    width: 42px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.user-profile h3 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.user-profile span {
+    font-size: 0.775rem;
+    font-weight: 600;
+}
+
+.user-detail {
+    margin-left: 15px;
+    white-space: nowrap;
+}
+
+.sidebar .user-account {
+    background: #fff;
+    border-radius: 4px;
+}
+
+
+/*main*/
+
+
+/*main*/
+/*main-1row*/
+main {
+    border: 9px solid #f0f0f0;
+    gap: 20px;
+    max-width: 300vh;
+    margin-left: 230px;
+    height: 90vh;
+}
+.cards {
+    display: flex;
+    gap: 20px;
+    margin: 20px auto;
+    max-width: 1300px;
+    height: 550px;
+}
+.cards .card1 {
+    min-width: 410px;
+    height: 410px;
+    width: 100%;
+}
+.cards .card2{
+    min-width: 410px;
+    height: 410px;
+}
+.cards .card3 {
+    min-width: 410px;
+    height: 410px;
+    vertical-align: bottom;
+}
+
+/*main-2row*/
+.result-list{
+    display: flex;
+}
+
+.result-list-input{
+    margin-left:500px;
+}
+/*main-3row*/
+.result-menu {
+    width: 100%;
+}
+.result-detail {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 5px;
+    scroll-behavior: auto;
+    overflow-x: auto;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    width: 300px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.next-button {
+    text-align: right;
+    margin-top: 20px;
+}
+
+footer p{
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #161a2d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4f52ba;
+}
+
+
+/*home*/
+.login{
+    margin-top:50px;
+}
+.video{
+    margin-top: 50px;
+}
+video{
+    min-height: 440px;
+}
+/* 테이블 스타일 설정 */
+table {
+     width: 100%; /* 테이블 너비를 100%로 설정 */
+     border-collapse: collapse; /* 테이블 셀 간의 간격을 없앰 */
+ }
+th, td {
+    border: 1px solid #dddddd; /* 테이블 셀의 테두리를 설정 */
+    text-align: center; /* 텍스트를 중앙 정렬 */
+    padding: 8px; /* 셀 안의 패딩을 설정 */
+}
+th {
+    background-color: #f2f2f2; /* 테이블 헤더의 배경색을 설정 */
+}
+.row1-cols1{
+    min-height: 300px;
+    max-height: 310px;
+}
+.row1-cols2{
+    min-height: 300px;
+    max-height: 310px;
+}
+.row1-cols3{
+    min-height: 300px;
+    max-height: 310px;
+}
+.col-span-3 {
+    overflow: scroll;
+}
+/* 태블릿용 미디어 쿼리 */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .query, .group-by, .aggregations {
+        grid-template-columns: 1fr;
+    }
+
+    .pagination {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+.home{
+    background: red;
+}
+/* 모바일용 미디어 쿼리 */
+@media screen and (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        gap: 10px;
+    }
+
+    th, td {
+        padding: 5px;
+    }
+
+    button {
+        width: 100%;
+    }
+}

@@ -1,0 +1,31 @@
+
+<!--<div th:fragment="formregister">-->
+  <form action="/run" method="post" class="">
+    <div class="rounded-md p-2 max-w-lg shadow-md bg-gray-300">
+      <div class="flex-row gap-x-10 space-y-3 mt-4 align-middle bg-gray-300">
+        <div class="h-7 px-4 text-left align-middle font-bold ">
+            <label for="username" class="w-20 inline-block text-left ">시스템</label>
+          <input value="centos" type="text" id="username" name="username"  placeholder="진단 대상" class="text-center px-4 py-2 " required>
+        </div>
+
+        <div class="h-7 px-4 text-left align-middle font-bold">
+            <label for="password" class="w-20 inline-block text-left">비밀번호 </label>
+          <input value="0718" type="text" id="password" name="password" placeholder="password" class=" text-center px-4 py-2 " required>
+
+        </div>
+
+        <div class="h-7 px-4 text-left align-middle font-bold">
+            <label for="ipAddress" class="w-20 inline-block text-left">IP주소 </label>
+                <input value="3.35.206.80" type="text" id="ipAddress" name="ipAddress" placeholder="IP" class="text-center px-4 py-2 " required>
+        </div>
+
+          <div class="h-7 px-4 text-left align-middle font-bold">
+            <label for="port" class="w-20 inline-block text-left">포트</label>
+          <input value="22" type="text" id="port" name="port" placeholder="port" class="text-center px-4 py-2 " required>
+          </div>
+          </table>
+      </div>
+      <button type="submit" class="w-full mt-5 bg-blue-300 text-gray-500 py-2 rounded-md font-semibold tracking-tight">start</button>
+    </div>
+  </form>
+<!--</div>-->

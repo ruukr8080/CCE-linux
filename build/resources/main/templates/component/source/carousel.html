@@ -1,0 +1,38 @@
+<div th:fragment="carousel">
+   <div class="container mx-auto px-4 py-8">
+        <div x-data="carousel()" class="relative">
+            <div class="overflow-hidden relative h-56 rounded-lg sm:h-64 xl:h-80 2xl:h-96">
+                <div class="flex transition-transform ease-out duration-500" x-ref="slider" :style="`transform: translateX(-${currentIndex * 100}%)`">
+                    <div class="flex-none w-full">
+                        <img src="/images/c1.png" alt="Slide 1" class="w-full h-full object-cover">
+                        <a href="#" class="absolute inset-0 flex items-center justify-center text-white text-2xl font-bold bg-black bg-opacity-50 hover:bg-opacity-75 transition-opacity">1</a>
+                    </div>
+                    <div class="flex-none w-full">
+                        <img src="/images/c2.png" alt="Slide 2" class="w-full h-full object-cover">
+                        <a href="#" class="absolute inset-0 flex items-center justify-center text-white text-2xl font-bold bg-black bg-opacity-50 hover:bg-opacity-75 transition-opacity">2</a>
+                    </div>
+                    <div class="flex-none w-full">
+                        <img src="/images/c3.png" alt="Slide 3" class="w-full h-full object-cover">
+                        <a href="#" class="absolute inset-0 flex items-center justify-center text-white text-2xl font-bold bg-black bg-opacity-50 hover:bg-opacity-75 transition-opacity">3</a>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute inset-0 flex items-center justify-between p-4">
+                <button @click="prev" class="p-1 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                </button>
+                <button @click="next" class="p-1 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </button>
+            </div>
+            <div class="absolute bottom-5 right-0 left-0">
+                <div class="flex items-center justify-center gap-2">
+                    <template x-for="(slide, index) in slides" :key="index">
+                        <button @click="currentIndex = index" :class="`w-3 h-3 rounded-full transition-colors ${currentIndex === index ? 'bg-white' : 'bg-white/50'}`"></button>
+                    </template>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

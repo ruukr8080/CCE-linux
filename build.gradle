@@ -1,0 +1,88 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.3.2'
+    id 'io.spring.dependency-management' version '1.1.6'
+    id 'com.github.node-gradle.node' version "7.0.1"
+    id 'base'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+sourceCompatibility = '17'
+
+tasks.withType(JavaCompile) {
+    options.compilerArgs << "-parameters"
+}
+configurations {
+    all {
+        exclude group: 'commons-logging', module: 'commons-logging'
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // basic
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    // lombok
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    // json
+    implementation group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1'
+
+    // python
+    implementation 'org.apache.commons:commons-exec:1.3'
+
+    // JSch Library -- ssh
+    implementation 'com.jcraft:jsch:0.1.55'
+
+    // 타임리프
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'
+    implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6'
+
+    //Swagger UI
+    implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.3.0'
+
+    // tailwind
+//    implementation 'org.webjars.npm:tailwindcss:3.4.7'
+
+    // AWS SDK for S3
+    implementation 'software.amazon.awssdk:s3:2.20.84'
+    implementation 'software.amazon.awssdk:core:2.20.84'
+    implementation 'com.amazonaws:aws-java-sdk-s3:1.12.100'
+    // Jackson Databind
+    implementation 'com.fasterxml.jackson.core:jackson-databind'
+
+}
+node {
+    download = true
+    /**
+     * node version
+     */
+    version = "20.16.0"
+
+    /**
+     * npm version
+     */
+    npmVersion = "10.8.1"
+    nodeProjectDir = file("${projectDir}/src/main/resources/static")
+}
+task installTailwind(type: NpmTask) {
+    args = ['install', 'tailwindcss']
+}
+
+task buildTailwindCss(type: Exec) {
+    commandLine 'npx', 'tailwindcss', 'build', './src/main/resources/static/styles/input.css', '-o', './src/main/resources/static/styles/output.css'
+}
+test {
+    useJUnitPlatform()
+}
+//processResources.dependsOn buildTailwindCss
+//buildTailwindCss.dependsOn installTailwind

@@ -1,0 +1,31 @@
+<html lang="en"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/defaultLayout}">
+<style>
+
+</style>
+<body>
+<!-- content : 메인 컨테이너-->
+<main layout:fragment="MainFragment" class="grid grid-cols-3 gap-2">
+    <div class="row1-cols1"><canvas id="card1Chart"></canvas>
+    </div>
+    <div class="row1-cols2"><canvas id="card2Chart"></canvas>
+    </div>
+    <div class="row1-cols3"><canvas id="card3Chart"></canvas>
+    </div>
+    <div class="col-span-3 ...">
+    <h1 >Server Information</h1>
+    <ul>
+        <li>SW_TYPE: <span th:text="${serverInfo['SW_TYPE']}"></span></li>
+        <li>SW_NM: <span th:text="${serverInfo['SW_NM']}"></span></li>
+        <li>SW_INFO: <span th:text="${serverInfo['SW_INFO']}"></span></li>
+        <li>HOST_NM: <span th:text="${serverInfo['HOST_NM']}"></span></li>
+        <li>DATE: <span th:text="${serverInfo['DATE']}"></span></li>
+        <li>TIME: <span th:text="${serverInfo['TIME']}"></span></li>
+        <li>IP_ADDRESS: <span th:text="${serverInfo['IP_ADDRESS']}"></span></li>
+        <li>UNIQ_ID: <span th:text="${serverInfo['UNIQ_ID']}"></span></li>
+    </ul>
+    </div>
+</main>
+</body>
+</html>
