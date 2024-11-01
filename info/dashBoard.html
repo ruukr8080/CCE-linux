@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playerport</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="flex flex-col w-full min-h-screen bg-muted/40">
+    <header class="flex items-center h-16 px-4 border-b shrink-0 bg-background md:px-6">
+        <a href="#" class="flex items-center gap-2 text-lg font-semibold sm:text-base mr-4">
+            <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="w-6 h-6"
+            >
+                <line x1="22" x2="2" y1="6" y2="6"></line>
+                <line x1="22" x2="2" y1="18" y2="18"></line>
+                <line x1="6" x2="6" y1="2" y2="22"></line>
+                <line x1="18" x2="18" y1="2" y2="22"></line>
+            </svg>
+            <span>CVE Kosain</span>
+        </a>
+    </header>
+    <main class="flex-1 p-4 md:p-8 grid gap-8">
+        <section>
+            <div class="grid gap-4">
+                <div class="flex items-center justify-between">
+                    <h2 class="text-2xl font-semibold">CVE</h2>
+                    <a class="text-primary hover:underline" href="#">
+                        View All
+                    </a>
+                </div>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">
+                        <div class="flex flex-col space-y-1.5 p-6">
+                            <h3 class="whitespace-nowrap text-2xl font-semibold leading-none tracking-tight">목적</h3>
+                        </div>
+                        <div class="p-6">
+                            <div class="aspect-[4/3]">
+                                <div
+                                        class="flex aspect-video justify-center text-xs [&amp;_.recharts-cartesian-axis-tick_text]:fill-muted-foreground [&amp;_.recharts-cartesian-grid_line[stroke='#ccc']]:stroke-border/50 [&amp;_.recharts-curve.recharts-tooltip-cursor]:stroke-border [&amp;_.recharts-dot[stroke='#fff']]:stroke-transparent [&amp;_.recharts-layer]:outline-none [&amp;_.recharts-polar-grid_[stroke='#ccc']]:stroke-border [&amp;_.recharts-radial-bar-background-sector]:fill-muted [&amp;_.recharts-rectangle.recharts-tooltip-cursor]:fill-muted [&amp;_.recharts-reference-line_[stroke='#ccc']]:stroke-border [&amp;_.recharts-sector[stroke='#fff']]:stroke-transparent [&amp;_.recharts-sector]:outline-none [&amp;_.recharts-surface]:outline-none min-h-[300px]"
+                                        data-chart="chart-r0"
+                                >
+                                    <div class="recharts-responsive-container"
+                                         style="width: 100%; height: 100%; min-width: 0px;">
+                                        <div
+                                                class="recharts-wrapper"
+                                                style="position: relative; cursor: default; width: 718px; height: 404px;"
+                                        >
+                                            <svg
+                                                    tabindex="0"
+                                                    role="application"
+                                                    class="recharts-surface"
+                                                    width="718"
+                                                    height="404"
+                                                    viewBox="0 0 718 404"
+                                                    style="width: 100%; height: 100%;"
+                                            >
+                                                <title></title>
+                                                <desc></desc>
+                                                <defs>
+                                                    <clipPath id="recharts1-clip">
+                                                        <rect x="12" y="0" height="404" width="694"></rect>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">
+                        <div class="flex flex-col space-y-1.5 p-6">
+                            <h3 class="whitespace-nowrap text-2xl font-semibold leading-none tracking-tight">Top 10
+                                CVEs</h3>
+                        </div>
+                        <div class="p-6">
+                            <div class="relative w-full overflow-auto">
+                                <table class="w-full caption-bottom text-sm">
+                                    <thead class="[&amp;_tr]:border-b">
+                                    <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
+                                        <th class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0">
+                                            SW_NM
+                                        </th>
+                                        <th class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0">
+                                            SW_INFO
+                                        </th>                                    
+                                        <th class="h-12 px-4 text-right align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0">
+                                            종합보안수준
+                                        </th>
+                                    </tr>
+                                    </thead>
+                                    <tbody class="[&amp;_tr:last-child]:border-0">
+                                    <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
+                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">CVE-날짜-시간</td>
+                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">
+                                            CentOS Linux release 7.9.2009 (Core)
+                                        </td>
+                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">
+                                            <div class="inline-flex w-fit items-center whitespace-nowrap rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 bg-orange-500 text-orange-50"
+                                                    data-v0-t="badge">양호</div>
+                                        </td>
+                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">70.67%</td>
+                                    </tr>
+                                    <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
+                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">CVE-날짜-시간
+                                        </td>
+                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">
+                                            CentOS Linux release 7.9.2009 (Core)
+                                        </td>
+                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">                                        
+                                            <div class="inline-flex w-fit items-center whitespace-nowrap rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 bg-red-500 text-red-50"
+                                                    data-v0-t="badge">취약</div>
+                                        </td>
+                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">50.67%</td>                                       
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="grid gap-4">
+                <div class="flex items-center justify-between">
+                    <h2 class="text-2xl font-semibold">취약점과 개선안</h2>
+                    <a class="text-primary hover:underline" href="#">
+                        View All
+                    </a>
+                </div>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">
+                        <div class="flex flex-col space-y-1.5 p-6">
+                            <h3 class="whitespace-nowrap text-2xl font-semibold leading-none tracking-tight">ResultInfo</h3>
+                        </div>
+                        <div class="p-6">
+                            <div class="aspect-[4/3]">
+                                <div
+                                        class="flex aspect-video justify-center text-xs [&amp;_.recharts-cartesian-axis-tick_text]:fill-muted-foreground [&amp;_.recharts-cartesian-grid_line[stroke='#ccc']]:stroke-border/50 [&amp;_.recharts-curve.recharts-tooltip-cursor]:stroke-border [&amp;_.recharts-dot[stroke='#fff']]:stroke-transparent [&amp;_.recharts-layer]:outline-none [&amp;_.recharts-polar-grid_[stroke='#ccc']]:stroke-border [&amp;_.recharts-radial-bar-background-sector]:fill-muted [&amp;_.recharts-rectangle.recharts-tooltip-cursor]:fill-muted [&amp;_.recharts-reference-line_[stroke='#ccc']]:stroke-border [&amp;_.recharts-sector[stroke='#fff']]:stroke-transparent [&amp;_.recharts-sector]:outline-none [&amp;_.recharts-surface]:outline-none min-h-[300px]"
+                                        data-chart="chart-r1"
+                                >
+                                    <div class="recharts-responsive-container"
+                                         style="width: 100%; height: 100%; min-width: 0px;">
+                                        <div
+                                                class="recharts-wrapper"
+                                                style="position: relative; cursor: default; width: 718px; height: 404px;"
+                                        >
+                                            <svg
+                                                    tabindex="0"
+                                                    role="application"
+                                                    class="recharts-surface"
+                                                    width="718"
+                                                    height="404"
+                                                    viewBox="0 0 718 404"
+                                                    style="width: 100%; height: 100%;"
+                                            >
+                                                <title></title>
+                                                <desc></desc>
+                                                <defs>
+                                                    <clipPath id="recharts2-clip">
+                                                        <rect x="5" y="5" height="394" width="708"></rect>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">
+                        <div class="flex flex-col space-y-1.5 p-6">
+                            <h3 class="whitespace-nowrap text-2xl font-semibold leading-none tracking-tight">
+                                ResultSimple
+                            </h3>
+                        </div>
+                        <div class="p-6">
+                            <div class="relative w-full overflow-auto">
+                                <table class="w-full caption-bottom text-sm">
+                                    <thead class="[&amp;_tr]:border-b">
+                                    <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
+                                        <th class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0">
+                                            Category
+                                        </th>
+                                        <th class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0">
+                                            Importance
+                                        </th>
+                                        <th class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0">
+                                            Level
+                                        </th>
+                                        <th class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0">
+                                            Sub_Category
+                                        </th>
+                                    </tr>
+                                    </thead>
+                                    <tbody class="[&amp;_tr:last-child]:border-0">
+                                    <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
+                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">계정관리</td>
+                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">
+                                            <div class="inline-flex w-fit items-center whitespace-nowrap rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 bg-green-500 text-green-50"
+                                                    data-v0-t="badge">상</div>
+                                        </td>
+                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">
+                                            <div class="inline-flex w-fit items-center whitespace-nowrap rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 bg-red-500 text-green-50"
+                                                    data-v0-t="badge">취약</div>
+                                        </td>
+                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">1.1 root 계정 원격 접속 제한</td>
+                                    </tr>
+                                    <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
+                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">계정관리</td>
+                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">
+                                            <div class="inline-flex w-fit items-center whitespace-nowrap rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 bg-yellow-500 text-yellow-50"
+                                                    data-v0-t="badge">중</div>
+                                        </td>
+                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">
+                                            <div class="inline-flex w-fit items-center whitespace-nowrap rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 bg-green-500 text-green-50"
+                                                    data-v0-t="badge">양호</div>
+                                        </td>
+                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">1.2 패스워드 복잡성 설정</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="grid gap-4">
+                <div class="flex items-center justify-between">
+                    <h2 class="text-2xl font-semibold">Report</h2>
+                    <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">
+                        Download
+                    </button>
+                </div>
+                <div class="rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">
+                    <div class="p-6">
+                        <div class="relative w-full overflow-auto">
+                            <table class="w-full caption-bottom text-sm">
+                                <thead class="[&amp;_tr]:border-b">
+                                <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
+                                    <th class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0">
+                                        OS
+                                    </th>
+                                    <th class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0">
+                                        Host
+                                    </th>
+                                    <th class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0">
+                                        IP
+                                    </th>
+                                    <th class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0">
+                                        진단 항목
+                                    </th>
+                                    <th class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0">
+                                        중요도
+                                    </th>
+                                    <th class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0">
+                                        안정성
+                                    </th>
+                                    <th class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0">
+                                        판단기준
+                                    </th>
+                                </tr>
+                                </thead>
+                                <tbody class="[&amp;_tr:last-child]:border-0">
+                                <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
+                                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">CentOS</td>
+                                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">localhost.localdomain</td>
+                                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">10.0.3.15</td>
+                                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">U-01</td>
+                                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">상</td>
+                                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">[취약]</td>
+                                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">
+                                        <div class="inline-flex w-fit items-center whitespace-nowrap rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 bg-yellow-500 text-yellow-50"
+                                                data-v0-t="badge">In Progress</div></td>
+                                </tr>
+                                <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
+                                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">CentOS</td>
+                                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">localhost.localdomain</td>
+                                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">10.0.3.15</td>
+                                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">U-02</td>
+                                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">상</td>
+                                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">[취약]</td>
+                                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">[취약]</td>
+                                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">[취약]</td>
+                                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">
+                                        <div class="inline-flex w-fit items-center whitespace-nowrap rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 bg-yellow-500 text-yellow-50"
+                                                data-v0-t="badge">In Progress</div></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="grid gap-4">
+                <div class="flex items-center justify-between">
+                    <h2 class="text-2xl font-semibold">Reporting</h2>
+                    <div class="flex gap-2">
+                        <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2">
+                            CVE Trends
+                        </button>
+                        <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2">
+                            Patching Progress
+                        </button>
+                        <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2">
+                            Remediation Effectiveness
+                        </button>
+                    </div>
+                </div>
+                <div class="rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">
+                    <div class="p-6">
+                        <p class="text-muted-foreground"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
